@@ -10,6 +10,17 @@
 * 	Template Style 
 *
 * ======================================================= */
+html { 
+  scroll-behavior: smooth;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 1px solid #bbb;
+  padding-top: 20px;
+}
+
+
 body {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 300;
@@ -17,9 +28,6 @@ body {
   line-height: 1.7;
   color: #828282;
   background: #fff;
-}
-
-html { scroll-behavior: smooth;
 }
 
 #experience {
