@@ -299,7 +299,6 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .about-content .desc {
   margin-bottom: 3em;
-  margin-left: 3em;
 }
 
 .fh5co-staff {
@@ -645,7 +644,7 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 480px) {
   .author .desc {
     width: 100%;
-    padding-left: 0;
+    padding-left: 10px;
   }
 }
 .author .desc span {
