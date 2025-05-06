@@ -91,81 +91,51 @@
 	<div id="fh5co-work">
 		<div class="container">
 			<div class="row">
-				<p>Much of the science I have performed has focused on analyzing large data sets and 
-					using the analysis to describe an issue or make a prediction. For more on my data 
-					analysis and science experience, see the examples below.</p>
+				<p>Across various roles, I have developed code in Python, MATLAB, NCL, Fortran, and other 
+					languages for various weather and climate applications including processing and analyzing 
+					data in NetCDF, Grib, CSV, and various other formats. For examples of my work, see below.</p>
 			</div>
 			<hr class="solid">
 			<div class="row">
 				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/da_AEW_edit.jpg);">
+					<div class="author-inner animate-box" style="background-image: url(images/image_GDJ.jpg);">
 					</div>
 					<div class="desc animate-box">
-						<h3>Predicting Seasonal Tropical Cyclone Formation</h3>
-						<p>The graphic on the right represents a 
-							<a href="https://doi.org/10.1002/2016GL071236" target="_blank">
-							study examining the seasonal relationship between African Easterly 
-							Waves (AEWs) and the formation of tropical cyclones (TCs) in the Atlantic</a>.
-						<p>In this study, I showed that there is a statistically significant correlation between 
-							the low-level energy associated with AEWs and the number of tropical cyclones in any 
-							given season. The inset graphic shows a cross-section over Africa of the average AEW 
-							kinetic energy (contours) and the correlation (shades).
-						<p>I then used statistical resampling methods and linear regression to understand how 
-							this relationship (i.e. in the graphic on the left, the correlation on the y-axis) 
-							varies by the AEW energy (x-axis). The results suggested that in seasons when 
-							AEW activity is low, AEW variability is a limiting factor on the formation of TCs 
-							but when AEW activity is high, there isn't a corresponding increase in TC formation. 
-							In simple terms, if there are few and/or weak AEWs, that is likely to limit TCs 
-							forming but once there's enough, there's enough.</p>
-					</div>
-				</div>
-			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/JASfig.jpg);"></div>
-					<div class="desc animate-box">
-						<h3>Mathematical Analysis of Reanalysis Data</h3>
-						<p>The graphic on the right represents a 
-							<a href="https://doi.org/10.1175/JAS-D-19-0019.1" target="_blank">
-							study examining how African Easterly Waves (AEWs) propagate and grow</a>. 
-							To do this, I derived an equation that diagnoses how the potential vorticity 
-							(PV; a measure of rotation) of the AEWs changes. Oversimplifying, it separates 
-							the contributions of the mean state of the atmosphere (i.e. the 
-							jets and temperature gradients) and the heat released by atmospheric convection. 
-							Using 30 years of atmospheric reanalysis data, isolating the AEWs by filtering 
-							that data, and correlating each of the terms in that equation with the AEW PV 
-							tendency and the AEW PV, I diagnosed the contributions to AEW propagation (left 
-							column) and growth (right column).</p>
-						<p>Put very simply, the jet pushes 
-							the mid-level AEW along (top left) while convection (bottom 4 right panels) 
-							continually grows and propagates the AEWs in the mid and low-levels, especially 
-							over Africa. There are relatively minimal contributions to growth by interactions 
-							with the mean state (barotropic/baroclinic instability) (top right panel). The 
-							latter result is significant because this instability has typically been thought 
-							of as the main growth mechanism for AEWs.</p>
+						<h3>Python Libraries for Atmospheric Science Research</h3>
+						<p>During work with NASA, I developed a library of Python-based code to build a data
+						 	set of tracked precipitation features from a global satellite-derived 
+						 	precipitation data set. The code is published in 
+						 	<a href="https://github.com/jamesohrussell/TIMPS" target="_blank">Github</a>, 
+						 	data set published in 
+						 	<a href="https://zenodo.org/records/5781881" target="_blank">Zenodo</a>, and the 
+						 	work is published in the 
+						 	<a href="https://rmets.onlinelibrary.wiley.com/doi/full/10.1002/gdj3.275">
+							Geoscience Data Journal</a> and 
+							<a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JD038563" 
+							target="_blank">JGR: Atmospheres</a>.</p>
+						<p>Over a number of years, I have also built a 
+							<a href="https://github.com/jamesohrussell/python-functions-for-atmo-sci" 
+							target="_blank">Python library of Python functions for atmospheric science 
+							data analysis</a> for use in a variety of research applications.</p>
+							<p>The graphic on the right shows a depiction of a number of tracked precipitation 
+								features from the data set above. It also shows a graph depicting the 
+								calculation of the area, volumetric rain rate, and lifetime stage of those 
+								precipitation features, developed with code from the atmospheric science 
+								functions described.</p>
 					</div>
 				</div>
 			</div>
 			<hr class="solid">
 			<div class="row">
 				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/AMPSbias_edit.jpg);"></div>
+					<div class="author-inner animate-box" style="background-image: url(images/G16_CMI_C13_rainbow_DORIAN.png);">
+					</div>
 					<div class="desc animate-box">
-						<h3>Forecast Model Evaluation and Validation</h3>
-						<p>The graphics on the right represent a 
-							<a href="images/JR_MS_Thesis_2014.pdf" target="_blank">
-								forecast model validation study</a> where I used a unique data set of soundings 
-								to evaluate operational WRF model forecasts over Antarctica. The graphic on the 
-								far left shows the various locations over Antarctica where vertical profiles of 
-								the atmosphere were observed over a period of a few months.</p>
-							<p>The other two graphics show the temperature and wind biases as a function of lead 
-								time for all soundings over the high plateau of Antarctica. The graphic on top 
-								shows that near surface warm biases get larger as lead time increases while the 
-								graphic at the bottom shows a persistent slow wind speed bias. These indicated 
-								that the WRF model has an issue representing the near-surface inversion over 
-								Antarctica. We later discovered was caused by the boundary layer 
-								parameterization scheme.</p>
+						<h3>Google Colab Notebooks for Meteorological Data Gathering and Visualization</h3>
+						<p>I have also developed a library of Google Colab-based Python notebooks that can 
+							download a plethora of publicly available observational (e.g. satellite and radar) 
+							and model forecast data (e.g. GFS and HRRR), and visualize those data on maps and 
+							soundings. Some examples of the graphics are included below.</p>
 					</div>
 				</div>
 			</div>
@@ -186,7 +156,6 @@
 					</ul>
 				</div>
 			</div>
-
 		</div>
 	</footer>
 	</div>
