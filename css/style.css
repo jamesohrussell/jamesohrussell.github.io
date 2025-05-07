@@ -26,12 +26,12 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #828282;
+  color: #383838;
   background: #fff;
 }
 
 #experience {
-  padding-top: 100px;
+  padding-top: 0;
 }
 
 #page {
@@ -63,13 +63,13 @@ body {
 }
 
 a {
-  color: #cabcab;
+  color: #2564a2;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #cabcab;
+  color: #2564a2;
   outline: none;
   text-decoration: none;
 }
@@ -475,7 +475,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  height: 300px;
+  height: 200px;
   margin-bottom: 20px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -483,7 +483,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .work .work-grid .inner {
   display: table;
-  height: 300px;
+  height: 200px;
   width: 100.1%;
   opacity: 0;
   background: rgba(237, 235, 232, 0.9);
