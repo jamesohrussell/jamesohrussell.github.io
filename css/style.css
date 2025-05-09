@@ -404,9 +404,8 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-author,
 #fh5co-work,
 #fh5co-about,
-#fh5co-contact,
-#fh5co-footer {
-  padding: 3em 0;
+#fh5co-contact {
+  padding: 0 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -414,9 +413,19 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-author,
   #fh5co-work,
   #fh5co-about,
-  #fh5co-contact,
+  #fh5co-contact{
+    padding: 0 0;
+  }
+}
+
+#fh5co-started,
+#fh5co-footer {
+  padding: 1em 0;
+  clear: both;
+}
+@media screen and (max-width: 768px) {
   #fh5co-footer {
-    padding: 3em 0;
+    padding: 1em 0;
   }
 }
 
@@ -467,6 +476,9 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.gallery-container {
+  margin-bottom: 50px;
+}
 .work {
   margin-bottom: 40px;
 }
@@ -483,7 +495,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .work .work-grid .inner {
   display: table;
-  height: 200px;
+  height: 100.1%;
   width: 100.1%;
   opacity: 0;
   background: rgba(237, 235, 232, 0.9);
@@ -645,6 +657,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .author .desc {
     width: 100%;
     padding-left: 0;
+
   }
 }
 .author .desc span {
