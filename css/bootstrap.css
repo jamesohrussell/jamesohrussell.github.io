@@ -865,8 +865,8 @@ pre code {
 }
 
 .container {
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 5px;
+  margin-left: 5px;
   padding-left: 15px;
   padding-right: 15px;
 }
