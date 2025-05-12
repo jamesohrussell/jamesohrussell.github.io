@@ -52,6 +52,36 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+	.floatimage1 {
+		float: left;
+		margin-right: 20px;
+	}
+
+	@media screen and (max-width: 600px){
+   		.floatimage1 { float:none; }
+	}
+
+	.floatimage2 {
+		float: right;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: 1000px){
+   		.floatimage2 { float:none; }
+	}
+
+	.floatimage3 {
+		float: left;
+		margin-right: 20px;
+	}
+
+	@media screen and (max-width: 1000px){
+   		.floatimage3 { float:none; }
+	}
+	</style>
+
 	</head>
 	<body>
 		
@@ -90,43 +120,49 @@
 	</nav>
 	<div id="fh5co-work">
 		<div class="container">
-			<div class="row">
+			
+			<div class="row animate-box">
 				<h2>Data Analysis &amp; Science</h2>
 				<p>Much of the science I have performed has focused on analyzing large data sets and 
 					using the analysis to describe an issue or make a prediction. For more on my data 
 					analysis and science experience, see the examples below.</p>
 			</div>
-			<hr class="solid">
-			<div>
-				<div class ="row">
+
+			<div class ="row animate-box">
+				<hr class="solid">
+				<h3>Predicting Seasonal Tropical Cyclone Formation</h3>
 				<div>
-					<img src="images/da_AEW_edit.jpg" alt="..." width="400px" height="400px" style="float: right;"">
-				</div>
-				<div>
-					<h3>Predicting Seasonal Tropical Cyclone Formation</h3>
-					<p>The graphic on the right represents a study examining the seasonal relationship 
-						between African Easterly Waves (AEWs) and the formation of tropical cyclones 
-						(TCs) in the Atlantic.</p>
-					<p>In this study, I showed that there is a statistically significant correlation 
-						between the low-level energy associated with AEWs and the number of tropical 
-						cyclones in any given season. The inset graphic shows a cross-section over 
-						Africa of the average AEW kinetic energy (contours) and the correlation (shades).</p>
-					<p>I then used statistical resampling methods and linear regression to understand 
-						how this relationship (i.e. in the graphic on the left, the correlation on the 
-						y-axis) varies by the AEW energy (x-axis). The results suggested that in seasons 
-						when AEW activity is low, AEW variability is a limiting factor on the formation 
-						of TCs but when AEW activity is high, there isn't a corresponding increase in TC 
-						formation. In simple terms, if there are few and/or weak AEWs, that is likely to 
-						limit TCs forming but once there's enough, there's enough.</p>
+					<div class="floatimage1">
+						<img src="images/da_AEW_edit.jpg" alt="..." width="400px">
+					</div>
+					<div>
+						<p>The graphic represents a study examining the seasonal relationship 
+							between African Easterly Waves (AEWs) and the formation of tropical cyclones 
+							(TCs) in the Atlantic.</p>
+						<p>In this study, I showed that there is a statistically significant correlation 
+							between the low-level energy associated with AEWs and the number of tropical 
+							cyclones in any given season. The inset graphic shows a cross-section over 
+							Africa of the average AEW kinetic energy (contours) and the correlation (shades).</p>
+						<p>I then used statistical resampling methods and linear regression to understand 
+							how this relationship (i.e. in the graphic on the left, the correlation on the 
+							y-axis) varies by the AEW energy (x-axis). The results suggested that in seasons 
+							when AEW activity is low, AEW variability is a limiting factor on the formation 
+							of TCs but when AEW activity is high, there isn't a corresponding increase in TC 
+							formation. In simple terms, if there are few and/or weak AEWs, that is likely to 
+							limit TCs forming but once there's enough, there's enough.</p>
+					</div>
 				</div>
 			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/JASfig.jpg);"></div>
-					<div class="desc animate-box">
-						<h3>Mathematical Analysis of Reanalysis Data</h3>
-						<p>The graphic on the right represents a 
+
+			<div class ="row animate-box">
+				<hr class="solid">
+				<h3>Mathematical Analysis of Reanalysis Data</h3>
+				<div>
+					<div class="floatimage2">
+					<img src="images/JASfig.jpg" alt="..." width="600px">
+					</div>
+					<div>
+						<p>The graphic represents a 
 							<a href="https://doi.org/10.1175/JAS-D-19-0019.1" target="_blank">
 							study examining how African Easterly Waves (AEWs) propagate and grow</a>. 
 							To do this, I derived an equation that diagnoses how the potential vorticity 
@@ -147,28 +183,30 @@
 					</div>
 				</div>
 			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/AMPSbias_edit.jpg);"></div>
-					<div class="desc animate-box">
-						<h3>Forecast Model Evaluation and Validation</h3>
-						<p>The graphics on the right represent a 
-							<a href="images/JR_MS_Thesis_2014.pdf" target="_blank">
-								forecast model validation study</a> where I used a unique data set of soundings 
-								to evaluate operational WRF model forecasts over Antarctica. The graphic on the 
-								far left shows the various locations over Antarctica where vertical profiles of 
-								the atmosphere were observed over a period of a few months.</p>
-							<p>The other two graphics show the temperature and wind biases as a function of lead 
-								time for all soundings over the high plateau of Antarctica. The graphic on top 
-								shows that near surface warm biases get larger as lead time increases while the 
-								graphic at the bottom shows a persistent slow wind speed bias. These indicated 
-								that the WRF model has an issue representing the near-surface inversion over 
-								Antarctica. We later discovered was caused by the boundary layer 
-								parameterization scheme.</p>
+
+			<div class ="row  animate-box">
+				<hr class="solid">
+				<h3>Forecast Model Evaluation and Validation</h3>
+				<div>
+					<div class="floatimage3">
+					<img src="images/AMPSbias_edit.jpg" alt="..." width="650px">
+					</div>
+					<div>
+						<p>The graphics represent a <a href="images/JR_MS_Thesis_2014.pdf" target="_blank">
+							forecast model validation study</a> where I used a unique data set of soundings 
+							to evaluate operational WRF model forecasts over Antarctica. The graphic on the 
+							far left shows the various locations over Antarctica where vertical profiles of 
+							the atmosphere were observed over a period of a few months.</p>
+						<p>The other two graphics show the temperature and wind biases as a function of lead 
+							time for all soundings over the high plateau of Antarctica. The graphic on top 
+							shows that near-surface warm biases get larger as lead time increases while the 
+							graphic at the bottom shows a persistent low-level slow wind speed bias. These 
+							indicated that the WRF model has an issue representing the near-surface inversion over 
+							Antarctica.</p>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 	<footer id="fh5co-footer" role="contentinfo">

@@ -52,6 +52,27 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+	.floatimage1 {
+		float: left;
+		margin-right: 20px;
+	}
+
+	@media screen and (max-width: 800px){
+   		.floatimage1 { float:none; }
+	}
+
+	.floatimage2 {
+		float: right;
+		margin-left: 20px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: 750px){
+   		.floatimage2 { float:none; }
+	}
+	</style>
+
 	</head>
 	<body>
 		
@@ -90,19 +111,22 @@
 	</nav>
 	<div id="fh5co-work">
 		<div class="container">
-			<div class="row">
+
+			<div class="row animate-box">
 				<h2>Software Development</h2>
 				<p>Across various roles, I have developed code in Python, MATLAB, NCL, Fortran, and other 
 					languages for various weather and climate applications including processing and analyzing 
 					data in NetCDF, Grib, CSV, and various other formats. For examples of my work, see below.</p>
 			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/image_GDJ.jpg);">
+
+			<div class ="row animate-box">
+				<hr class="solid">
+				<h3>Python Libraries for Atmospheric Science Research</h3>
+				<div>
+					<div class="floatimage1">
+					<img src="images/image_GDJ.jpg" alt="..." width="550px">
 					</div>
-					<div class="desc animate-box">
-						<h3>Python Libraries for Atmospheric Science Research</h3>
+					<div>
 						<p>During work with NASA, I developed a library of Python-based code to build a data
 						 	set of tracked precipitation features from a global satellite-derived 
 						 	precipitation data set. The code is published in 
@@ -118,28 +142,32 @@
 							<a href="https://github.com/jamesohrussell/python-functions-for-atmo-sci" 
 							target="_blank">Python library of Python functions for atmospheric science 
 							data analysis</a> for use in a variety of research applications.</p>
-							<p>The graphic on the right shows a depiction of a number of tracked precipitation 
-								features from the data set above. It also shows a graph depicting the 
-								calculation of the area, volumetric rain rate, and lifetime stage of those 
-								precipitation features, developed with code from the atmospheric science 
-								functions described.</p>
+						<p>The graphic shows a depiction of a number of tracked precipitation 
+							features from the data set above. It also shows a graph depicting the 
+							calculation of the area, volumetric rain rate, and lifetime stage of those 
+							precipitation features, developed with code from the atmospheric science 
+							functions described.</p>
 					</div>
 				</div>
 			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/G16_CMI_C13_rainbow_DORIAN.png);">
+
+			<div class ="row animate-box">
+				<hr class="solid">
+				<h3>Google Colab Notebooks for Meteorological Data Gathering and Visualization</h3>
+				<div>
+					<div class="floatimage2">
+					<img src="images/G16_CMI_C13_rainbow_DORIAN.png" alt="..." width="500px">
 					</div>
-					<div class="desc animate-box">
-						<h3>Google Colab Notebooks for Meteorological Data Gathering and Visualization</h3>
+					<div>
 						<p>I have also developed a library of Google Colab-based Python notebooks that can 
 							download a plethora of publicly available observational (e.g. satellite and radar) 
 							and model forecast data (e.g. GFS and HRRR), and visualize those data on maps and 
-							soundings. Some examples of the graphics are included below.</p>
+							soundings. An example is included where I developed a script that produces tropical 
+							GOES imagery centered on a tropical cyclone given the date and time and storm name.</p>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 	<footer id="fh5co-footer" role="contentinfo">

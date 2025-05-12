@@ -52,6 +52,18 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+	.floatimage1 {
+		float: right;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	@media screen and (max-width: 900px){
+   		.floatimage1 { float:none; }
+	}
+	</style>
+
 	</head>
 	<body>
 		
@@ -90,7 +102,7 @@
 	</nav>
 	<div id="fh5co-work">
 		<div class="container">
-			<div class="row">
+			<div class="row animate-box">
 				<h2>Weather &amp; Climate Modeling</h2>
 				<p>I use the Weather Research and Forecasting (WRF) Model to simulate synoptic and 
 					convective-scale weather phenomena. This involved all aspects of running running the 
@@ -98,13 +110,15 @@
 					(HPC) environment, modifying and editing the model code and input data for experiments, 
 					and processing and analyzing the output data.</p>
 			</div>
-			<hr class="solid">
-			<div class="row">
-				<div class="author">
-					<div class="author-inner animate-box" style="background-image: url(images/image_model.jpg);">
+
+			<div class ="row animate-box">
+				<hr class="solid">
+				<h3>Simulating African Easterly Waves with the WRF model</h3>
+				<div>
+					<div class="floatimage1">
+						<img src="images/image_model.jpg" alt="..." width="600px">
 					</div>
-					<div class="desc animate-box">
-						<h3>Simulating African Easterly Waves with the WRF model</h3>
+					<div>
 						<p>In this study I used WRF at convection-permitting resolutions to investigate 
 							the association between African Easterly Waves (AEWs) and Mesoscale Convective 
 							Systems (MCSs). Various experiments included modifying the moisture in the input 
@@ -122,6 +136,7 @@
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
