@@ -57,10 +57,16 @@
 		float: right;
 		margin-right: 20px;
 		margin-bottom: 20px;
+		width: 600px;
 	}
 
 	@media screen and (max-width: 900px){
-   		.floatimage1 { float:none; }
+   		.floatimage1 { 
+			float:none;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			width: 100%;
+		}
 	}
 	</style>
 
@@ -115,11 +121,9 @@
 				<hr class="solid">
 				<h3>Simulating African Easterly Waves with the WRF model</h3>
 				<div>
-					<div class="floatimage1">
 						<a href="images/image_model.jpg" target ="_blank">
-							<img src="images/image_model.jpg" alt="..." width="600px" class="frame">
+							<img src="images/image_model.jpg" alt="..." class="floatimage1">
 						</a>
-					</div>
 					<div>
 						<p>In this study I used WRF at convection-permitting resolutions to investigate 
 							the association between African Easterly Waves (AEWs) and Mesoscale Convective 
