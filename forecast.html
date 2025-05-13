@@ -54,23 +54,33 @@
 
 	<style>
 	.floatimage1 {
-		float: right;
+		float: left;
 		margin-right: 20px;
 		margin-bottom: 20px;
+		width: 400px;
 	}
 
-	@media screen and (max-width: 900px){
-   		.floatimage1 { float:none; }
+	@media screen and (max-width: 600px){
+   		.floatimage1 { 
+			float: none;
+			margin-bottom: 20px;
+			width: 100%;
+		}
 	}
 
 	.floatimage2 {
 		float: left;
 		margin-right: 20px;
 		margin-bottom: 20px;
+		width: 250px;
 	}
 
-	@media screen and (max-width: 500px){
-   		.floatimage1 { float:none; }
+	@media screen and (max-width: 400px){
+   		.floatimage2 { 
+			float:none;
+			margin-bottom: 20px;
+			width: 250px;
+		}
 	}
 	</style>
 
@@ -125,11 +135,8 @@
 				<hr class="solid">
 				<h3>Forecasting and Field Work on a NASA Field Campaign in the Caribbean</h3>
 				<div>
-					<div class="floatimage1">
-						<a href="images/fieldthumb.jpg" target ="_blank">
-							<img src="images/fieldthumb.jpg" alt="..." width="400px">
-						</a>
-					</div>
+					<a href="images/fieldthumb.jpg" target ="_blank">
+						<img src="images/fieldthumb.jpg" alt="..." class="floatimage1"></a>
 					<div>
 						<p>In 2020 and 2021, I planned, worked on, and led components of a 
 							<a href="https://cpex.jpl.nasa.gov/cpex-aw/" target="_blank">NASA field campaign</a> 
@@ -149,9 +156,7 @@
 				<hr class="solid">
 				<h3>Building Expertise in Forecasting</h3>
 				<div>
-					<div class="floatimage2">
-						<img src="images/thumb_blowsnow.jpg" alt="..." width="250px">
-					</div>
+					<img src="images/thumb_blowsnow.jpg" alt="..." class="floatimage2">
 					<div>
 						<p>Throughout my time at The COMET Program, I have trained forecasters to 
 							forecast for a variety of weather phenomena and in a variety of different situations. 

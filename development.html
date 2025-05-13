@@ -56,20 +56,27 @@
 	.floatimage1 {
 		float: left;
 		margin-right: 20px;
+		margin-bottom: 20px;
+		width: 550px;
 	}
 
 	@media screen and (max-width: 800px){
-   		.floatimage1 { float:none; }
+   		.floatimage1 { 
+			float: none;
+			width: 100%;
+		}
 	}
 
 	.floatimage2 {
 		float: right;
-		margin-left: 20px;
-		margin-bottom: 20px;
+		width: 500px;
 	}
 
 	@media screen and (max-width: 750px){
-   		.floatimage2 { float:none; }
+   		.floatimage2 { 
+			float: none; 
+			width: 100%;
+		}
 	}
 	</style>
 
@@ -123,11 +130,9 @@
 				<hr class="solid">
 				<h3>Python Libraries for Atmospheric Science Research</h3>
 				<div>
-					<div class="floatimage1">
-						<a href="images/image_GDJ.jpg" target ="_blank">
-							<img src="images/image_GDJ.jpg" alt="..." width="550px">
-						</a>
-					</div>
+					<a href="images/image_GDJ.jpg" target ="_blank">
+						<img src="images/image_GDJ.jpg" alt="..."  class="floatimage1">
+					</a>
 					<div>
 						<p>During work with NASA, I developed a library of Python-based code to build a data
 						 	set of tracked precipitation features from a global satellite-derived 
@@ -157,11 +162,9 @@
 				<hr class="solid">
 				<h3>Google Colab Notebooks for Meteorological Data Gathering and Visualization</h3>
 				<div>
-					<div class="floatimage2">
-						<a href="images/G16_CMI_C13_rainbow_DORIAN.png" target ="_blank">	
-							<img src="images/G16_CMI_C13_rainbow_DORIAN.png" alt="..." width="500px">
-						</a>
-					</div>
+					<a href="images/G16_CMI_C13_rainbow_DORIAN.png" target ="_blank">	
+						<img src="images/G16_CMI_C13_rainbow_DORIAN.png" alt="..." class="floatimage2">
+					</a>
 					<div>
 						<p>I have also developed a library of Google Colab-based Python notebooks that can 
 							download a plethora of publicly available observational (e.g. satellite and radar) 
