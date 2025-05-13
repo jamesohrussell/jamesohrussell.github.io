@@ -55,30 +55,38 @@
 	<style>
 	.floatimage1 {
 		float: left;
-		margin-right: 20px;
+		width: 400px;
 	}
 
 	@media screen and (max-width: 600px){
-   		.floatimage1 { float:none; }
+   		.floatimage1 { 
+			float:none;
+			width: 100%;
+		}
 	}
 
 	.floatimage2 {
 		float: right;
-		margin-left: 20px;
-		margin-bottom: 20px;
+		width: 600px;
 	}
 
-	@media screen and (max-width: 1000px){
-   		.floatimage2 { float:none; }
+	@media screen and (max-width: 950px){
+   		.floatimage2 { 
+			float:none;
+			width: 100%;
+		}
 	}
 
 	.floatimage3 {
 		float: left;
-		margin-right: 20px;
+		width: 650px;
 	}
 
 	@media screen and (max-width: 1000px){
-   		.floatimage3 { float:none; }
+   		.floatimage3 { 
+			float:none;
+			width: 100%;
+		}
 	}
 	</style>
 
@@ -134,7 +142,7 @@
 				<div>
 					<div class="floatimage1">
 						<a href="images/da_AEW_edit.jpg" target ="_blank">
-							<img src="images/da_AEW_edit.jpg" alt="..." width="400px">
+							<img src="images/da_AEW_edit.jpg" alt="..." class="floatimage1">
 						</a>
 					</div>
 					<div>
@@ -162,7 +170,7 @@
 				<div>
 					<div class="floatimage2">
 						<a href="images/JASfig.jpg" target ="_blank">
-							<img src="images/JASfig.jpg" alt="..." width="600px">
+							<img src="images/JASfig.jpg" alt="..." class="floatimage2">
 						</a>
 					</div>
 					<div>
@@ -194,7 +202,7 @@
 				<div>
 					<div class="floatimage3">
 						<a href="images/AMPSbias_edit.jpg" target ="_blank">
-							<img src="images/AMPSbias_edit.jpg" alt="..." width="650px">
+							<img src="images/AMPSbias_edit.jpg" alt="..." class="floatimage3">
 						</a>
 					</div>
 					<div>
