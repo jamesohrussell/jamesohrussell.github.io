@@ -2975,7 +2975,7 @@ tbody.collapse.in {
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 0 0;
   margin: 0 0 0;
   list-style: none;
   font-size: 14px;
@@ -2990,17 +2990,17 @@ tbody.collapse.in {
 }
 .dropdown-menu.pull-right {
   right: 0;
-  left: auto;
+  left: 0;
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 9px 0;
+  margin: 0 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 0 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857;
