@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://jamesohrussell.github.io/</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/index.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/datascience.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/development.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/modeling.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/forecast.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/training.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/management.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/images/Resume_JR.pdf</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/contact.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/images/JR_MS_Thesis_2014.pdf</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/online_ed.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/inperson_ed.html</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jamesohrussell.github.io/images/ams_2025_nhc-wmo.pdf</loc>
+  <lastmod>2025-05-16T15:21:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
