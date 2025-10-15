@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    
+    <!-- Custom styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        .map-container {
+            position: relative;
+            height: 100vh;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            min-width: 300px;
+        }
+        
+        .controls h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+        }
+        
+        .file-info {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .nav-btn {
+            padding: 8px 16px;
+            background: #007cba;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .nav-btn:hover {
+            background: #005a87;
+        }
+        
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="controls">
+            <h3>TIFF File Viewer</h3>
+            <div class="file-info">
+                <div>Current: <span id="current-file">Loading...</span></div>
+                <div>File <span id="current-index">1</span> of <span id="total-files">0</span></div>
+            </div>
+            <div class="nav-buttons">
+                <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                <button id="next-btn" class="nav-btn" disabled>Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+    
+    <script>
+        // Initialize the map
+        let map = L.map('map').setView([44.0682, -114.7420], 6); // Idaho coordinates
+        
+        // Add OpenStreetMap tiles
+        let osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 19
+        });
+        
+        // Add layers to map
+        osmLayer.addTo(map);
+        
+        // Add scale control
+        L.control.scale().addTo(map);
+
+        // Multi-TIFF functionality
+        let currentLayer = null;
+        let currentIndex = 0;
+
+        // Define your TIFF files here - add more files as needed
+        const tiffFiles = [
+            "data/downward-shortwave_20251012_21.tif",
+            "data/downward-shortwave_20251013_00.tif",
+            "data/downward-shortwave_20251013_03.tif"
+        ];
+
+        // DOM elements
+        const currentFileSpan = document.getElementById('current-file');
+        const currentIndexSpan = document.getElementById('current-index');
+        const totalFilesSpan = document.getElementById('total-files');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // Initialize the application
+        function init() {
+            totalFilesSpan.textContent = tiffFiles.length;
+            loadTiffFile(0);
+            updateControls();
+        }
+
+        // Load a specific TIFF file
+        function loadTiffFile(index) {
+            if (index < 0 || index >= tiffFiles.length) return;
+            
+            currentIndex = index;
+            const filePath = tiffFiles[index];
+            
+            // Remove current layer if it exists
+            if (currentLayer) {
+                map.removeLayer(currentLayer);
+            }
+            
+            // Update UI
+            currentFileSpan.textContent = filePath.split('/').pop();
+            currentIndexSpan.textContent = index + 1;
+            
+            // Load new TIFF file with cache busting
+            const cacheBustedUrl = `${filePath}?v=${new Date().getTime()}`;
+            fetch(cacheBustedUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${filePath}: ${response.status}`);
+                    }
+                    return response.arrayBuffer();
+                })
+                .then(arrayBuffer => {
+                    return parseGeoraster(arrayBuffer);
+                })
+                .then(georaster => {
+                    currentLayer = new GeoRasterLayer({
+                        georaster: georaster,
+                        opacity: 0.7,
+                        pixelValuesToColorFn: values => {
+                            const tempF = values[0];
+                            if (isNaN(tempF) || tempF === georaster.noDataValue) return 'transparent';
+                            
+                            // Normalize to 30-70°F range
+                            const normalized = Math.max(0, Math.min(1, (tempF - 30) / 40));
+                            
+                            if (normalized < 0.33) return `rgb(0, 0, ${Math.round(128 + normalized * 127)})`;
+                            if (normalized < 0.66) return `rgb(0, ${Math.round(255 - (normalized - 0.33) * 255)}, 255)`;
+                            return `rgb(${Math.round((normalized - 0.66) * 765)}, ${Math.round(255 - (normalized - 0.66) * 255)}, 0)`;
+                        },
+                        resolution: 64
+                    });
+                    currentLayer.addTo(map);
+                    updateControls();
+                })
+                .catch(error => {
+                    console.error('Error loading TIFF file:', error);
+                    currentFileSpan.textContent = `Error: ${filePath.split('/').pop()}`;
+                });
+        }
+
+        // Update control button states
+        function updateControls() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === tiffFiles.length - 1;
+        }
+
+        // Navigation functions
+        function previousFile() {
+            if (currentIndex > 0) {
+                loadTiffFile(currentIndex - 1);
+            }
+        }
+
+        function nextFile() {
+            if (currentIndex < tiffFiles.length - 1) {
+                loadTiffFile(currentIndex + 1);
+            }
+        }
+
+
+        // Event listeners
+        prevBtn.addEventListener('click', previousFile);
+        nextBtn.addEventListener('click', nextFile);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                previousFile();
+            } else if (e.key === 'ArrowRight') {
+                nextFile();
+            }
+        });
+
+        // Initialize the application
+        init();
+
+    </script>
+</body>
+</html>
